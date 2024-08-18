@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+  /* Btn Styles */
+  .btn {
+    @apply text-white px-3 pt-1 pb-2 rounded-md transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-cyan-600 hover:bg-cyan-500;
+  }
+  .btn-secondary {
+    @apply bg-red-700 hover:bg-red-600;
+  }
+  .btn-tertiary {
+    @apply text-blue-500 bg-transparent border border-blue-500;
+  }
+}
+.pending-page {
+  @apply transition-colors duration-300 hover:text-cyan-600;
+}
+.active-page {
+  @apply text-cyan-600;
+}
