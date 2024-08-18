@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 w-full h-[3.5rem] bg-neutral-300 z-[1000]">
         <div className="container h-full flex justify-between items-center">
           <h4 className="text-[1.5rem] font-semibold">
-            <a href="">TakeNotes</a>
+            <a href="">TaskDrive</a>
           </h4>
           {/* Desktop Menu */}
           <ul className="hidden sm:flex sm:gap-x-6">
@@ -42,7 +42,7 @@ const Navbar = () => {
           <ul
             className={`sm:hidden fixed ${
               menu ? `top-[3.5rem]` : `top-[-100%]`
-            } left-0 w-full h-fit px-4 py-4 bg-neutral-300 transition-all duration-500`}
+            } left-0 w-full h-fit p-4 flex flex-col gap-y-2 bg-neutral-300 transition-all duration-500`}
           >
             {navItems.map((item, index) => (
               <li className="text-[1.125rem] font-semibold" key={index}>
@@ -51,6 +51,7 @@ const Navbar = () => {
                     isActive ? "active-page" : "pending-page"
                   }
                   to={item.src}
+                  onClick={menuHandler}
                 >
                   {item.name}
                 </NavLink>
